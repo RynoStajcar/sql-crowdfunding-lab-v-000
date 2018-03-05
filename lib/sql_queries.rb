@@ -33,10 +33,12 @@ HAVING (SUM(Pledges.amount) - Projects.funding_goal) >= 0
 end
 
 def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_them_by_the_amount_and_users_name
-"SELECT Users.name, Pledges.amount
+"SELECT Users.name, SUM(Pledges.amount)
 FROM Users
-INNER JOIN Pledges
-ON Users.id = Pledges.user_id"
+LEFT JOIN Pledges
+ON Users.id = Pledges.user_id
+GROUP BY Users.name
+ORDER BY SUM(Pledges.amount) ASC"
 end
 
 def selects_the_category_names_and_pledge_amounts_of_all_pledges_in_the_music_category
