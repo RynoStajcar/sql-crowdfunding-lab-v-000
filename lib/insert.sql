@@ -20,7 +20,7 @@
 --   ('Wendy', 15),
 --   ('Trevor', 22),
 --   ('Zek', 69);
--- 
+--
 --   INSERT INTO projects (title, category, funding_goal, start_date, end_date)
 --   VALUES
 --   ('Roads', 'Infrastructure', 20000000, '02/4/2018', '02/4/2022'),
@@ -33,7 +33,7 @@
 --   ('Stop Cancer', 'Researcg', 340000000, '12/23/2017', '11/07/2024'),
 --   ('Endangered Species', 'Wildlife', 700000, '07/12/2018', '08/12/2020'),
 --   ('Deep Learning', 'Research', 6000000, '04/04/2015', '04/04/2019');
--- 
+--
 -- INSERT INTO pledges (amount, user_id, project_id)
 -- VALUES
 --   (150000, 1, 1),
